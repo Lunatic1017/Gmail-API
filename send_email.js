@@ -27,6 +27,7 @@ console.log(res.body);
 // using nodemailer to send the email
     const transport = nodemailer.createTransport({
       service: "gmail",
+      //entering the auth object to authenticate the data
       auth: {
         type: "oauth2",
         user: Credentials.email,

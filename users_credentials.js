@@ -41,8 +41,8 @@ async function getGtoken(req) {
         saveGtokenStr = JSON.stringify(saveGtoken);
         // saving user data in clientCredentials.json file
         fs.writeFile(
-          "././clientCredentials.json",
-          saveGtokenStr,
+          "./clientCredentials.json",
+          saveGtokenStr,    //saving the token in the file
           function (err) {
             if (err) throw err;
             console.log("Saved!");
@@ -59,7 +59,7 @@ async function getGtoken(req) {
     return false;
   }
 
-  return tokens;
+  
 }
 
 // main api route
